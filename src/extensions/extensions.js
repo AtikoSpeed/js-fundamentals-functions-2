@@ -66,9 +66,12 @@ function calculateQuantities(ingredients, layers) {
 // improveRecipe({ eggs: 2, milk: 100, sugar: 200 }, 3)
 // returns: { eggs: 6, milk: 300, sugar: 600 }
 function improveRecipe(takenObject, portion) {
-  let newObject = objekt
-  newObject.(Object.keys(takenObject)[0]) = Object.values(takenObject)[0] * portion
-  return newObjekt
+  const newArray = Object.keys(takenObject)
+  const newObject = {}
+  for (let i = 0; i < newArray.length; i++) {
+    newObject[newArray[i]] = takenObject[newArray[i]] * portion
+  }
+  return newObject
 }
 // Don't change the code below this line
 module.exports = {
